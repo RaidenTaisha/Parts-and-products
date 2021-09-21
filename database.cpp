@@ -77,15 +77,15 @@ product* database::removeProduct(const QString& productName) {
 }
 
 //функция регистрации пользователя
-user* database::registerUser(const QString& fullName, const QString& login, const QString& password) {
+user* database::registerUser(const QString& fullName, const QString& login, const QString& password, const UserType& usertype) {
     class user *out = nullptr;
 
-    if (findUser(login)->userType() == UserType::ERROR) {
+    if (findUser(login) == nullptr) {
         out = new class user;
         out->setName(fullName);
         out->setLogin(login);
         out->setPassword(password);
-        out->setUserType(_users.length() == 0? UserType::ADMIN : UserType::USER);
+        out->setUserType(usertype);
         _users.push_back(out);
         return out;
     }

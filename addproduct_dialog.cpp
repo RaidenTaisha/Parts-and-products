@@ -20,13 +20,15 @@ addproduct_dialog::~addproduct_dialog()
 
 void addproduct_dialog::on_addpart_pushButton_clicked()
 {
-    ui->coposition_listWidget->addItem(ui->available_listWidget->takeItem(ui->available_listWidget->currentRow())->text());
+    if(ui->available_listWidget->currentRow() >= 0)
+        ui->coposition_listWidget->addItem(ui->available_listWidget->takeItem(ui->available_listWidget->currentRow())->text());
 }
 
 
 void addproduct_dialog::on_delpart_pushButton_clicked()
 {
-    ui->available_listWidget->addItem(ui->coposition_listWidget->takeItem(ui->coposition_listWidget->currentRow())->text());
+    if(ui->coposition_listWidget->currentRow() >= 0)
+        ui->available_listWidget->addItem(ui->coposition_listWidget->takeItem(ui->coposition_listWidget->currentRow())->text());
 }
 
 void addproduct_dialog::on_add_pushButton_clicked()

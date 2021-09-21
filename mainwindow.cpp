@@ -12,8 +12,13 @@ MainWindow::~MainWindow() {
 void MainWindow::setUser(class user* user) {
     this->_user = user;
     drawList();
-    /*
-    if (this->_user.userType() != UserType::PROVIDER) {
+    if (this->_user->userType() == UserType::PROVIDER) {
+        ui->add_provider->hide();
+        ui->remove_provider->hide();
+        ui->add_storage->hide();
+        ui->remove_storage->hide();
+    }
+    if (this->_user->userType() == UserType::DISP) {
         ui->add_part->hide();
         ui->remove_part->hide();
         ui->add_product->hide();
@@ -23,7 +28,6 @@ void MainWindow::setUser(class user* user) {
         ui->add_storage->hide();
         ui->remove_storage->hide();
     }
-    */
 }
 
 //функция отображения списков (деталей, изделий, складов, пользователей)

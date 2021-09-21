@@ -74,7 +74,7 @@
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>icons/green arrow.png</normaloff>icons/green arrow.png</iconset>
+             <normaloff>C:/Users/Андрей/Desktop/Зелёная стрелка вправо.png</normaloff>C:/Users/Андрей/Desktop/Зелёная стрелка вправо.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -97,7 +97,7 @@
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>icons/red arrow.png</normaloff>icons/red arrow.png</iconset>
+             <normaloff>C:/Users/Андрей/Desktop/Красная стрелка влево.png</normaloff>C:/Users/Андрей/Desktop/Красная стрелка влево.png</iconset>
            </property>
            <property name="iconSize">
             <size>

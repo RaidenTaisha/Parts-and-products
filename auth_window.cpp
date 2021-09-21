@@ -32,9 +32,8 @@ void auth_window::on_loginPushButton_clicked()
         return;
     }
 
-    user *_user = new user;
-    _user = database::instance()->findUser(login);
-    if (_user->userType() == UserType::ERROR)
+    user *_user = database::instance()->findUser(login);
+    if (_user == nullptr)
     {
         QMessageBox::critical(this, "Error", "No such user");
         return;

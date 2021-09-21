@@ -5,7 +5,7 @@
 
 //типы пользователей
 enum class UserType {
-    ERROR, ADMIN, USER, DISP, PROVIDER
+    ERROR, ADMIN, DISP, PROVIDER
 };
 
 class user {

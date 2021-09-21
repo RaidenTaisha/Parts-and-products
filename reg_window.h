@@ -18,6 +18,8 @@ public:
 private slots:
     void on_RegisterPushButton_clicked();
 
+    void on_cbx_user_type_textActivated(const QString &arg1);
+
 private:
     Ui::reg_window *ui;
 };

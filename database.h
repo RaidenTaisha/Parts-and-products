@@ -31,7 +31,7 @@ public:
     //вектор ссылок на пользователей
     const QVector<user *> &user() const;
     //функция регистрации пользователя
-    class user* registerUser(const QString &fullName, const QString &login, const QString &password);
+    class user* registerUser(const QString &fullName, const QString &login, const QString &password, const UserType& usertype);
     //функция поиска пользователя
     class user* findUser(const QString userLogin);
 
